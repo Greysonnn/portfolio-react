@@ -1,3 +1,7 @@
+.App {
+  text-align: center;
+}
+
 :root{
   --light-blue: #04C3FF;
   --light-blue-shadow: rgb(69 211 255 / 27%);
