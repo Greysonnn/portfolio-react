@@ -5,19 +5,16 @@
     align-items: center;
     margin: 50px 0 0 0;
 }
-
 .about-me-parent {
     max-width: 1000px;
     width: 70%;
     
 }
-
 .about-me-card {
     display: flex;
     width: 100%;
     box-shadow: 0 0px 20px -2px #1f2235;
 }
-
 .about-me-profile {
     width: 50%;
     background-image: url('../../assets/AboutMe/me.jpg');
