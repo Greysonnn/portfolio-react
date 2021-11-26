@@ -1,22 +1,66 @@
-import React,{useEffect} from 'react'
-import ScreenHeading from '../../utilities/ScreenHeading/ScreenHeading'
-import ScrollService from '../../utilities/ScrollService'
-import Animations from '../../utilities/Animations'
+import React, { useEffect } from "react";
+import ScreenHeading from "../../utilities/ScreenHeading/ScreenHeading";
+import ScrollService from "../../utilities/ScrollService";
+import Animations from "../../utilities/Animations";
 
 export default function AboutMe(props) {
-    let fadeInScreenHandler = (screen)=>{
-        if(screen.fadeScreen !== props.id)
-        return
-        Animations.animations.fadeInScreen(props.id)
-    }
-    const fadeInSubscription = ScrollService.currentScreenFadeIn
+  let fadeInScreenHandler = (screen) => {
+    if (screen.fadeScreen !== props.id) return;
+    Animations.animations.fadeInScreen(props.id);
+  };
+  const fadeInSubscription =
+    ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
 
-export default function AboutMe() {
-    return (
-        <div className='about-me-container screen-container'>
-            <div className='about-me-parent'>
-                <ScreenHeading title={'About Me'} subHeading={'Why choose me?'}/>
+  const SCREEN_CONSTANTS = {
+    description:
+      "Full stack web and mobile developer with background in cybersecurity and focus on web 3.0 technologies.",
+    highlights: {
+      bullets: [
+        "Full stack web and mobile development",
+        "Modern, responsive, and interactive UI",
+        "Web 3.0 integration, Moralis SDK",
+        "React and React Native",
+        "Building REST API",
+        "SQL Database implementation",
+        "Cybersecurity standards and practics",
+      ],
+      heading: "Here are a Few Highlights:",
+    },
+  };
+  const renderHighlight = () => {
+    return SCREEN_CONSTANTS.highlights.bullets.map((value, i) => (
+      <div className="highlight" key={i}>
+        <div className="highlight-blob"></div>
+        <span>{value}</span>
+      </div>
+    ));
+  };
+
+  return (
+    <div className="about-me-container screen-container" id={props.id || ""}>
+      <div className="about-me-parent">
+        <ScreenHeading title={"About Me"} subHeading={"Why choose me?"} />
+        <div className="about-me-card">
+          <div className="about-me-profile"></div>
+          <div className="about-me-details">
+            <span className="about-me-description">
+              {SCREEN_CONSTANTS.description}
+            </span>
+            <div className="about-me-highlights">
+              <div className="highlight-heading">
+                <span>{SCREEN_CONSTANTS.highlights.heading}</span>
+              </div>
+              {renderHighlight()}
             </div>
+            <div className="about-me-options">
+              <button className="btn primary-btn"> Hire Me</button>
+              <a href="ehizcv.pdf" download="Greyson ehizcv.pdf">
+                <button className="btn highlighted-btn">Get Resume</button>
+              </a>
+            </div>
+          </div>
         </div>
-    );
+      </div>
+    </div>
+  );
 }
