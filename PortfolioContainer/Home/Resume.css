@@ -6,26 +6,22 @@
   min-height: fit-content;
   margin: 120px 0;
 }
-
 .resume-card {
   display: flex;
   height: 360px;
   width: 1000px;
-  
 }
 .resume-bullets {
   height: 100%;
   box-shadow: 15px 0 9px -10px #1f2235;
   width: 320px;
 }
-
 .resume-bullet-details {
   flex-grow: 1;
   width: 600px;
   overflow: hidden;
   padding: 0 0 0 70px;
 }
-
 .experience-description {
   margin: 10px 0 0 0;
   text-align: justify;
@@ -43,7 +39,6 @@
   width: 100%;
   position: relative;
 }
-
 .bullets{
   width: 80%;
   position: relative;
@@ -66,7 +61,6 @@
   white-space: nowrap;
   font-family: Arial, Helvetica, sans-serif;
 }
-
 .bullet-logo {
   height: 15px;
   margin: 0 30px 0 0;
@@ -78,7 +72,6 @@
   background-color: #1f2235;
   position: absolute;
 }
-
 .selected-bullet{
   color: white;
   width: 100%;
@@ -173,11 +166,9 @@
     flex-direction: column;
     align-items: center;
   }
-
   .bullets {
     width: 90%;
   }
-
   .resume-card {
     height: fit-content;
     display: flex;
@@ -186,18 +177,15 @@
     align-items: center;
     width: 90%;
   }
-
   .resume-bullet-details {
     height: 360px;
     padding: 0;
     width: fit-content;
   }
-
   .resume-bullets {
     margin: 30px 0;
     width: 100%;
   }
-
   .selected-bullet {
     width: 100%;
   }
