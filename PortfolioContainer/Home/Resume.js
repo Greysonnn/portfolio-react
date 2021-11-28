@@ -79,7 +79,6 @@ export default function Resume(props) {
     },
   ];
 
-
   const resumeDetails = [
     <div className='resume-screen-container' key='education'>
       <ResumeHeading 
