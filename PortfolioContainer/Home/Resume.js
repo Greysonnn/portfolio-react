@@ -96,7 +96,7 @@ export default function Resume(props) {
     </div>,
     <div className='resume-screen-container' key='work-experience'>
       <ResumeHeading 
-        heading={"Intermountain Healthcare"}
+        heading={"Hospital Healthcare"}
         subHeading={"Security Analyst"}
         fromDate={"2020"}
         toDate={"Present"}
