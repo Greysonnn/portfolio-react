@@ -27,6 +27,7 @@ export default function AboutMe(props) {
       heading: "Here are a Few Highlights:",
     },
   };
+  
   const renderHighlight = () => {
     return SCREEN_CONSTANTS.highlights.bullets.map((value, i) => (
       <div className="highlight" key={i}>
