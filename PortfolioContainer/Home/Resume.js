@@ -121,6 +121,7 @@ export default function Resume(props) {
             onboarding application with dynamic form content.{" "}
         </span>
       </div>,
+
       <div className='resume-screen-container programming-skills-container' key='programming-skills'>
         {programmingSkillsDetails.map((skill, index)=>(
           <div className='skill-parent' key={index}>
@@ -163,7 +164,6 @@ export default function Resume(props) {
           description="Challenge the reflexes and reset the brain."
           />
       </div>
-
     </div>,
   ];
 
