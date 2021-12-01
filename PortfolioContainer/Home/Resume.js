@@ -117,7 +117,8 @@ export default function Resume(props) {
         </span>
         <br/>
         <span className='experience-description'>
-          - Increasing my knowledge base in securing large networks with thousands of users.
+          - Integrated the web app with backend services to create new user
+            onboarding application with dynamic form content.{" "}
         </span>
       </div>,
       <div className='resume-screen-container programming-skills-container' key='programming-skills'>
