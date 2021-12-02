@@ -13,6 +13,7 @@ export default function ContactMe(props) {
     if (screen.fadeScreen !== props.id) return;
     Animations.animations.fadeInScreen(props.id);
   };
+  
   const fadeInSubscription =
     ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
 
@@ -31,7 +32,6 @@ export default function ContactMe(props) {
     const handleMessage = (e)=>{
         setMessage(e.target.value);
     };
-    
 
   return (
     <div className="main-container" id={props.id || ""}>
